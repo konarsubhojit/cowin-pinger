@@ -54,15 +54,15 @@ function checkParams() {
         else {            
             const params = {
                 vaccine: argv.vaccine, // vaccine = COVISHIELD , COVAXIN
-                dose: 1, // dose = 1, 2
+                dose: argv.dose, // dose = 1, 2
                 key: "bJHRYwDXNjD3t1wp0pK8w1BVokJN0TGvUjKovCQ4NGz",
-                hook: "notify",
-                age: "57",
+                hook: "query",
+                age: argv.age,
                 districtId: argv.district,
                 interval: argv.interval || defaultInterval,
                 appointmentsListLimit: argv.appts || appointmentsListLimit,
                 date: argv.date || format(new Date(), 'dd-MM-yyyy'),
-                pin: "722101"
+                pin: argv.pin
             }
 
             console.log('\nCowin Pinger started succesfully\n');
